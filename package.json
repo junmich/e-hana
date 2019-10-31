@@ -7,6 +7,10 @@
     "type": "git",
     "url": "https://github.com/luapearth/e-hana.git"
   },
+  "scripts": {
+    "start": "webpack-dev-server --open --hot --mode development",
+    "build": "webpack --mode production"
+  },
   "author": "John Paul<jp@pauldm.com>",
   "license": "MIT",
   "devDependencies": {

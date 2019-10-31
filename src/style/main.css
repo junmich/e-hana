@@ -1,0 +1,51 @@
+.textbox {
+    background: transparent;
+    border: none;
+    width: 100% !important;
+    padding: 10px;
+    border: 1px solid #CCCCCC;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 5px;
+}
+
+.textLabel {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.taskList {
+    text-align: left;
+    font-size: 18pt;
+    margin-top: 10px;
+}
+
+.buttonContainer {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button {
+    min-width: 100px;
+    font-family: inherit;
+    font-size: 100%;
+    padding: .3em 1em;
+    color: #FFF;
+    border: 1px solid #427899;
+    background-color: #3563e6;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
