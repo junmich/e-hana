@@ -1,9 +1,6 @@
 import React from 'react';
+import { Header, Button, InputBox, TaskList } from './components'; // updated import - package components in on import
 
-import Header from './components/Header';
-import TextBox from './components/InputBox';
-import Button from './components/Button';
-import TaskList from './components/TaskList';
 
 import { container } from './style/main'; // demonstrate react js style
 import './style/main.css'; // demonstrate css loader
@@ -12,7 +9,18 @@ class App extends React.Component {
     // create state for this app
     state = {
       todo: '',
-      tasks: [],
+      tasks: [
+          {
+              id: 0,
+              todo: 'Read on React',
+              isComplete: false,
+          },
+          {
+              id: 1,
+              todo: 'Write some code',
+              isComplete: false,
+          },
+      ],
     };
     handleChange = (e) => { // reusable function for textbox onChange event
         const { name, value } = e.target;
@@ -47,7 +55,7 @@ class App extends React.Component {
         return (
             <div style={container}>
                 <Header title="E Hana"/>
-                <TextBox
+                <InputBox
                     label="ToDo:"
                     name="todo"
                     onChange={this.handleChange}

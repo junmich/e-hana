@@ -5,12 +5,14 @@ const Checkbox = ({title, checked, onClick}) => {
     return (
         <div>
             <input
-                className="checkmark"
+                className="regular-checkbox"
                 type="checkbox"
                 checked={checked}
                 onClick={onClick}
             />
-            {title}
+            <label>
+                {title}
+            </label>
         </div>
     );
 };
