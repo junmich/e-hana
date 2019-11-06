@@ -1,3 +1,4 @@
+const path = require('path');
 module.exports = {
     entry: './src/index.js',
     module: {
@@ -20,11 +21,10 @@ module.exports = {
         extensions: ['*', '.js', '.jsx']
     },
     output: {
-        path: __dirname + '/dist',
-        publicPath: '/',
-        filename: 'bundle.js'
+        filename: 'index.js', // place where bundled app will be served
     },
     devServer: {
-        contentBase: './dist'
-    }
+        inline: true, // autorefresh
+        port: 8080 // development port server
+    },
 };
