@@ -39,15 +39,20 @@ class App extends React.Component {
     };
     checkTask = (id) => {
       const { tasks } = this.state;
-      const updatedTasks = [];
-      // check and update task list
-      for (let i = 0; i < tasks.length; i++) {
-          const task = tasks[i];
+      const updatedTasks = tasks.map((task) => {
           if (task.id === id) {
               task.isComplete = !task.isComplete;
           }
-          updatedTasks.push(task);
-      }
+          return task;
+      });
+      // check and update task list
+      // for (let i = 0; i < tasks.length; i++) {
+      //     const task = tasks[i];
+      //     if (task.id === id) {
+      //         task.isComplete = !task.isComplete;
+      //     }
+      //     updatedTasks.push(task);
+      // }
       this.setState({ tasks: updatedTasks });
     };
     render () {
